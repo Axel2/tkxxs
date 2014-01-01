@@ -29,10 +29,9 @@ class MyTinyUI
   
   
   def explain_puts(  )
-    @outW.puts "'puts' schreibt ins OutW(indow)."
+    @outW.puts "'puts' writes to the Output Window."
     
-    
-    @outW.puts_h2 "@outW.puts_h2 schreibt formatierte Überschriften ins OutW."
+    @outW.puts_h2 "@outW.puts_h2 writes formated text to the Output Window"
     
     @outW.puts "Other formatings can be implemented."
     puts
