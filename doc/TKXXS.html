@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=CP850" http-equiv="Content-Type">
+
+<title>module TKXXS - tkxxs-0.1.0 Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/tkxxs/version.rb
+    <li>lib/tkxxs.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="TKXXS/Tk/RbWidget.html">TKXXS::Tk::RbWidget</a>
+  
+  
+  
+    <li><span class="include">Tk::Tile</span>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-ask_single_line">#ask_single_line</a>
+    
+    <li><a href="#method-i-choose_dir">#choose_dir</a>
+    
+    <li><a href="#method-i-messageBoxExamples">#messageBoxExamples</a>
+    
+    <li><a href="#method-i-multi_choice">#multi_choice</a>
+    
+    <li><a href="#method-i-open_file">#open_file</a>
+    
+    <li><a href="#method-i-open_files">#open_files</a>
+    
+    <li><a href="#method-i-save_file">#save_file</a>
+    
+    <li><a href="#method-i-single_choice">#single_choice</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./History_txt.html">History</a>
+  
+    <li class="file"><a href="./Manifest_txt.html">Manifest</a>
+  
+    <li class="file"><a href="./README_txt.html">README</a>
+  
+    <li class="file"><a href="./ext/readme_txt.html">readme</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./TKXXS.html">TKXXS</a>
+  
+    <li><a href="./TKXXS/OutW.html">TKXXS::OutW</a>
+  
+    <li><a href="./TKXXS/Tk.html">TKXXS::Tk</a>
+  
+    <li><a href="./TKXXS/Tk/RbWidget.html">TKXXS::Tk::RbWidget</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module TKXXS</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="VERSION">VERSION
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-ask_single_line" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ask_single_line</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="TKXXS.html#method-i-ask_single_line">#ask_single_line</a>(question=nil,
+help=nil, hash=nil)</p>
+
+<p>Ask for a single line of text.</p>
+
+<p><strong>Params</strong>:</p>
+<ul><li>
+<p><code>question</code> - (String, optional) Your question;  <code>nil</code>
+=&gt; Default question</p>
+</li><li>
+<p><code>help</code> - (String, optional) Text used in the BalloonHelp; 
+<code>nil</code> =&gt; No help text</p>
+</li><li>
+<p><code>hash</code> - (Hash, optional)</p>
+<ul><li>
+<p><code>:question</code> - Like above.</p>
+</li><li>
+<p><code>:help</code> - Like above.</p>
+</li><li>
+<p><code>:configSection</code> - (any String, Integer or Float or nil) Not
+important. Sets the section in the config-file, where for example the
+window size and position is stored.</p>
+</li><li>
+<p><code>:defaultEntry</code> - (String) Default answer.</p>
+</li></ul>
+</li></ul>
+
+<p><strong>Returns</strong>: (String or nil) The answer of the dialog.
+'Cancel' returns nil.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre class="ruby"><span class="ruby-identifier">help</span> = <span class="ruby-string">&quot;This dialog is named 'ask_single_line'&quot;</span>
+<span class="ruby-identifier">ans</span> = <span class="ruby-identifier">ask_single_line</span>(
+  <span class="ruby-string">&quot;Want to know more?\nPoint with the mouse to the entry field!&quot;</span>,
+  <span class="ruby-identifier">help</span>,
+  :<span class="ruby-identifier">defaultEntry</span> =<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;Of course&quot;</span>
+)
+</pre>
+          
+
+          
+          <div class="method-source-code" id="ask_single_line-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask_single_line</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">AskSingleLineD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ask_single_line-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ask_single_line-method -->
+
+    
+      <div id="method-i-choose_dir" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">choose_dir</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="TKXXS.html#method-i-choose_dir">#choose_dir</a>(
+initialdir=nil,help=nil,hash=nil )</p>
+
+<p><strong>Params</strong>:</p>
+<ul><li>
+<p><code>initialdir</code> - (String, optional) Initial dir; default =
+<code>nil</code> -&gt; Working dir at the time of calling this method.</p>
+</li><li>
+<p><code>help</code> - (String, optional) ; Text used in the BalloonHelp;
+default = <code>nil</code> -&gt; No help.</p>
+</li><li>
+<p><code>hash</code> - (Hash, optional)</p>
+<ul><li>
+<p><code>:initialdir</code> - Like above.</p>
+</li><li>
+<p><code>:help</code> - Like above.</p>
+</li><li>
+<p><code>:mode</code> - Don't modify this!</p>
+</li><li>
+<p><code>:question</code> - (String) Your question; <code>nil</code> -&gt; no
+question.</p>
+</li><li>
+<p><code>:title</code> - (String) Title of the dialog window.</p>
+</li><li>
+<p><code>:defaultEntry</code> - (String) Path, shown in the entry field.</p>
+</li><li>
+<p><code>:validate</code> - <code>true</code> or <code>false</code>; if true,
+a valid path must be chosen, canceling the dialog is not possible.</p>
+</li><li>
+<p><code>:configSection</code> - (any String, Integer or Float or nil) Not
+important. Sets the section in the config-file, where for example the
+window size and position is stored.</p>
+</li></ul>
+</li></ul>
+
+<p><strong>Returns:</strong> (String) Path of the chosen dir; 
+<code>nil</code>, if 'Cancel' was clicked.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre class="ruby"><span class="ruby-identifier">help</span> = <span class="ruby-string">&quot;Pick a dir.&quot;</span>
+<span class="ruby-identifier">ans</span> = <span class="ruby-identifier">choose_dir</span>( 
+  <span class="ruby-string">'c:\WinDows'</span>, 
+  <span class="ruby-identifier">help</span>, 
+  :<span class="ruby-identifier">validate=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, 
+  :<span class="ruby-identifier">defaultEntry=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'c:/windows/system'</span> 
+)
+</pre>
+
+<p><strong>TODO:</strong> How to choose multiple dirs or even dirs &amp;
+files?</p>
+          
+
+          
+          <div class="method-source-code" id="choose_dir-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">choose_dir</span>( *<span class="ruby-identifier">args</span> ) <span class="ruby-comment"># initialdir</span>
+  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">ChooseDirD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- choose_dir-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- choose_dir-method -->
+
+    
+      <div id="method-i-messageBoxExamples" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">messageBoxExamples</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="messageBoxExamples-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">messageBoxExamples</span>
+  <span class="ruby-comment"># TODO: Is this usefull?</span>
+  <span class="ruby-comment">##################################################################</span>
+  <span class="ruby-comment"># :type: :abortretryignore, :ok, :okcancel, :retrycancel, :yesno, :yesnocancel</span>
+  <span class="ruby-comment"># :icon: :error, :info, :question or :warning (default: info)</span>
+  <span class="ruby-comment"># :detail: Specifies an auxiliary message to the main message given by</span>
+  <span class="ruby-comment">#   the -message option. Where supported by the underlying OS, the</span>
+  <span class="ruby-comment">#   message detail will be presented in a less emphasized font than the</span>
+  <span class="ruby-comment">#   main message.</span>
+  <span class="ruby-comment"># Returns: A String describing the pressed button (&quot;ok&quot;, &quot;cancel&quot;, &quot;retry&quot;, &quot;ignore&quot;, ...)</span>
+  <span class="ruby-comment"># Balloonhelp funktioniert damit nicht (oder?).</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-identifier">ans</span> = <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">messageBox</span>( <span class="ruby-value">:type=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:yesno</span>,<span class="ruby-value">:icon=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:question</span>,
+    <span class="ruby-value">:title=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;Next&quot;</span>,
+    <span class="ruby-value">:message=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;xxx&quot;</span>,
+    <span class="ruby-value">:detail=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;xxx&quot;</span>
+  )
+  <span class="ruby-comment">#    </span>
+  <span class="ruby-comment">#    puts sprintf(&quot;--DEBUG: button: %1s &quot;, button.inspect)   #loe</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- messageBoxExamples-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- messageBoxExamples-method -->
+
+    
+      <div id="method-i-multi_choice" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">multi_choice</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="TKXXS.html#method-i-multi_choice">#multi_choice</a>(
+aryWithChoices, help=nil, hash=nil )</p>
+
+<p><strong>Params</strong>:</p>
+<ul><li>
+<p><code>aryWithChoices</code> - (Array) one of the following formats:</p>
+<ul><li><dl class="rdoc-list label-list"><dt> choiceStrA, choiceStrB, ...
+<dd></dd></dl>
+</li><li><dl class="rdoc-list label-list"><dt> [choiceStrA,objectA], [choiceStrB,objectB], ...  
+<dd></dd></dl>
+</li><li><dl class="rdoc-list label-list"><dt> [choiceStrA,objectA,helpStrA], [choiceStrB,objectB,helpStrB], ...
+<dd></dd></dl>
+</li></ul>
+
+<p>Quite usefull: a Proc for object.</p>
+</li><li>
+<p><code>help</code> - (String, optional) Array, with one help-String for each
+choice element!;  <code>nil</code> =&gt; No help text</p>
+</li><li>
+<p><code>hash</code> - (Hash, optional)</p>
+<ul><li>
+<p><code>:question</code> - Like above.</p>
+</li><li>
+<p><code>:help</code> - Like above.</p>
+</li><li>
+<p><code>:configSection</code> - (any String, Integer or Float or nil) Not
+important. Sets the section in the config-file, where for example the
+window size and position is stored.</p>
+</li><li>
+<p><code>:title</code> - (String) Title of the dialog window</p>
+</li><li>
+<p><code>:bd</code> - (Number as String) ?</p>
+</li><li>
+<p><code>:selectmode =&gt; :multiple</code> - Obsolet?</p>
+</li><li>
+<p><code>:searchFieldHelp</code> - (String) Ballon help of the search field,
+searchField not implemented yet</p>
+</li><li>
+<p><code>:returnChoiceAndClient</code> - returns the right side
+(<code>false</code>) or both sides (<code>true</code>) of
+<code>aryWithChoices</code>.</p>
+</li></ul>
+</li></ul>
+
+<p><strong>Returns:</strong></p>
+<ul><li>
+<p>An Array of the chosen right sides of <code>aryWithChoices</code> if
+:returnChoiceAndClient == <code>false</code> (default),</p>
+</li><li>
+<p>An Array of the chosen right and left sides of <code>aryWithChoices</code>
+if :returnChoiceAndClient == <code>true</code>,</p>
+</li><li>
+<p><code>nil</code>, if 'Cancel' was clicked.</p>
+</li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre>help = ['Help #1', 'Help #2', 'Help #3']
+ans = single_choice(
+  [
+    [ &quot;You want 1?&quot;, 1],
+    [ &quot;You want 2?&quot;, 2],
+    [ &quot;You want 3?&quot;, 3],
+  ],
+  help
+)</pre>
+          
+
+          
+          <div class="method-source-code" id="multi_choice-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multi_choice</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">MultiChoiceD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- multi_choice-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- multi_choice-method -->
+
+    
+      <div id="method-i-open_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">open_file</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="TKXXS.html#method-i-open_file">#open_file</a>(
+initialdir=nil,help=nil,hash=nil )</p>
+
+<p>To get this dialog explain, run the example and point the mouse at each
+button.</p>
+
+<p><strong>Params</strong>:</p>
+<ul><li>
+<p><code>initialdir</code> - (String, optional) Initial dir; default =
+<code>nil</code> -&gt; Working dir at the time of calling this method.</p>
+</li><li>
+<p><code>help</code> - (String, optional) ; Text used in the BalloonHelp;
+default = <code>nil</code> -&gt; No help.</p>
+</li><li>
+<p><code>hash</code> - (Hash, optional)</p>
+<ul><li>
+<p><code>:initialdir</code> - Like above.</p>
+</li><li>
+<p><code>:help</code> - Like above.</p>
+</li><li>
+<p><code>:mode</code> - Don't change this!</p>
+</li><li>
+<p><code>:multiple</code> - Don't change this!</p>
+</li><li>
+<p><code>:question</code> - (String) Your question; <code>nil</code> -&gt; no
+question.</p>
+</li><li>
+<p><code>:title</code> - (String) Title of the dialog window.</p>
+</li><li>
+<p><code>:defaultEntry</code> - (String) Path, shown in the entry field.</p>
+</li><li>
+<p><code>:validate</code> - <code>true</code> or <code>false</code>; if true,
+a valid path must be chosen, canceling the dialog is not possible.</p>
+</li><li>
+<p><code>:configSection</code> - (any String, Integer or Float or nil) Not
+important. Sets the section in the config-file, where for example the
+window size and position is stored.</p>
+</li><li>
+<p><code>:filetypes</code> - (Array of Arrays) Filter for the file types
+Format of the (inner) Arrays:</p>
+<ul><li>
+<p>First element: (String) Name of the file type, e.g. 'Ruby files'</p>
+</li><li>
+<p>Second element: (Array) List of extensions for the file type, e.g.
+['.rb','.rbw']</p>
+</li><li>
+<p>Third element: (String, optional) Mac file type(s), e.g. 'TEXT'</p>
+</li><li>
+<p>Example:</p>
+
+<pre>filetypes = [
+  ['Text files',       ['.txt','.doc']          ],
+  ['Text files',       [],                      'TEXT' ],
+  ['Ruby Scripts',     ['.rb'],                 'TEXT' ],
+  ['Tcl Scripts',      ['.tcl'],                'TEXT' ],
+  ['C Source Files',   ['.c','.h']              ],
+  ['All Source Files', ['.rb','.tcl','.c','.h'] ],
+  ['Image Files',      ['.gif']                 ],
+  ['Image Files',      ['.jpeg','.jpg']         ],
+  ['Image Files',      [],                      ['GIFF','JPEG']],
+  ['All files',        '*'                      ]
+]</pre>
+</li></ul>
+</li></ul>
+</li></ul>
+
+<p><strong>Returns:</strong> (Array) Paths of the chosen files; 
+<code>nil</code>, if 'Cancel' was clicked.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre class="ruby"><span class="ruby-identifier">filetypes</span> = [
+    [<span class="ruby-string">'Log Files'</span>, [<span class="ruby-string">'.log'</span>]],
+    [<span class="ruby-string">'All Files'</span>, <span class="ruby-string">'*'</span>]
+  ]
+
+<span class="ruby-identifier">ans</span> = <span class="ruby-identifier">open_file</span>(<span class="ruby-string">'c:\Windows'</span>, :<span class="ruby-identifier">filetypes=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">filetypes</span>)
+</pre>
+
+<p><strong>TODO:</strong> Does initialdir work?</p>
+          
+
+          
+          <div class="method-source-code" id="open_file-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 533</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_file</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">OpenFileD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- open_file-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- open_file-method -->
+
+    
+      <div id="method-i-open_files" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">open_files</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="TKXXS.html#method-i-open_files">#open_files</a>(
+initialdir=nil,help=nil,hash=nil )</p>
+
+<p>To get this dialog explain, run the example and point the mouse at each
+button.</p>
+
+<p><strong>Params</strong>:</p>
+<ul><li>
+<p><code>initialdir</code> - (String, optional) Initial dir; default =
+<code>nil</code> -&gt; Working dir at the time of calling this method.</p>
+</li><li>
+<p><code>help</code> - (String, optional) ; Text used in the BalloonHelp;
+default = <code>nil</code> -&gt; No help.</p>
+</li><li>
+<p><code>hash</code> - (Hash, optional)</p>
+<ul><li>
+<p><code>:initialdir</code> - Like above.</p>
+</li><li>
+<p><code>:help</code> - Like above.</p>
+</li><li>
+<p><code>:mode</code> - Don't change this!</p>
+</li><li>
+<p><code>:multiple</code> - Don't change this!</p>
+</li><li>
+<p><code>:question</code> - (String) Your question; <code>nil</code> -&gt; no
+question.</p>
+</li><li>
+<p><code>:title</code> - (String) Title of the dialog window.</p>
+</li><li>
+<p><code>:defaultEntry</code> - (String) Path, shown in the entry field.</p>
+</li><li>
+<p><code>:validate</code> - <code>true</code> or <code>false</code>; if true,
+a valid path must be chosen, canceling the dialog is not possible.</p>
+</li><li>
+<p><code>:configSection</code> - (any String, Integer or Float or nil) Not
+important. Sets the section in the config-file, where for example the
+window size and position is stored.</p>
+</li><li>
+<p><code>:filetypes</code> - (Array of Arrays) Filter for the file types
+Format of the (inner) Arrays:</p>
+<ul><li>
+<p>First element: (String) Name of the file type, e.g. 'Ruby files'</p>
+</li><li>
+<p>Second element: (Array) List of extensions for the file type, e.g.
+['.rb','.rbw']</p>
+</li><li>
+<p>Third element: (String, optional) Mac file type(s), e.g. 'TEXT'</p>
+</li><li>
+<p>Example:</p>
+
+<pre>filetypes = [
+  ['Text files',       ['.txt','.doc']          ],
+  ['Text files',       [],                      'TEXT' ],
+  ['Ruby Scripts',     ['.rb'],                 'TEXT' ],
+  ['Tcl Scripts',      ['.tcl'],                'TEXT' ],
+  ['C Source Files',   ['.c','.h']              ],
+  ['All Source Files', ['.rb','.tcl','.c','.h'] ],
+  ['Image Files',      ['.gif']                 ],
+  ['Image Files',      ['.jpeg','.jpg']         ],
+  ['Image Files',      [],                      ['GIFF','JPEG']],
+  ['All files',        '*'                      ]
+]</pre>
+</li></ul>
+</li></ul>
+</li></ul>
+
+<p><strong>Returns:</strong> (Array) Paths of the chosen files; 
+<code>nil</code>, if 'Cancel' was clicked.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre class="ruby"><span class="ruby-identifier">filetypes</span> = [
+    [<span class="ruby-string">'Log Files'</span>, [<span class="ruby-string">'.log'</span>]],
+    [<span class="ruby-string">'All Files'</span>, <span class="ruby-string">'*'</span>]
+  ]
+
+<span class="ruby-identifier">ans</span> = <span class="ruby-identifier">open_files</span>(<span class="ruby-string">'c:\Windows'</span>, :<span class="ruby-identifier">filetypes=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">filetypes</span>)
+</pre>
+
+<p><strong>TODO:</strong> When using "Recent"-Button &gt; "Files" or
+"Favorite"-Button &gt; "Files" you can choose only one from Recent and none
+from, for example "Browse"; should be multiple.</p>
+          
+
+          
+          <div class="method-source-code" id="open_files-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 475</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_files</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">OpenFilesD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- open_files-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- open_files-method -->
+
+    
+      <div id="method-i-save_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_file</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="TKXXS.html#method-i-save_file">#save_file</a>(
+initialdir=nil,help=nil,hash=nil )</p>
+
+<p>To get this dialog explain, run the example and point the mouse at each
+button.</p>
+
+<p><strong>Params</strong>:</p>
+<ul><li>
+<p><code>initialdir</code> - (String, optional) Initial dir; default =
+<code>nil</code> -&gt; Working dir at the time of calling this method.</p>
+</li><li>
+<p><code>help</code> - (String, optional) ; Text used in the BalloonHelp;
+default = <code>nil</code> -&gt; No help.</p>
+</li><li>
+<p><code>hash</code> - (Hash, optional)</p>
+<ul><li>
+<p><code>:initialdir</code> - Like above.</p>
+</li><li>
+<p><code>:help</code> - Like above.</p>
+</li><li>
+<p><code>:initialfile</code> - (String) Default filename, extension will be
+added automatically by filetypes-setting; default = 'Untitled'</p>
+</li><li>
+<p><code>:mode</code> - Don't change this!</p>
+</li><li>
+<p><code>:multiple</code> - Don't change this!</p>
+</li><li>
+<p><code>:question</code> - (String) Your question; <code>nil</code> -&gt; no
+question.</p>
+</li><li>
+<p><code>:title</code> - (String) Title of the dialog window.</p>
+</li><li>
+<p><code>:defaultEntry</code> - (String) Path, shown in the entry field.</p>
+</li><li>
+<p><code>:validate</code> - <code>true</code> or <code>false</code>; if true,
+a valid path must be chosen, canceling the dialog is not possible.</p>
+</li><li>
+<p><code>:configSection</code> - (any String, Integer or Float or nil) Not
+important. Sets the section in the config-file, where for example the
+window size and position is stored.</p>
+</li><li>
+<p><code>:defaultextension</code> - ??? (Don't change).</p>
+</li><li>
+<p><code>:filetypes</code> - (Array of Arrays) Filter for the file types
+Format of the (inner) Arrays:</p>
+<ul><li>
+<p>First element: (String) Name of the file type, e.g. 'Ruby files'</p>
+</li><li>
+<p>Second element: (Array) List of extensions for the file type, e.g.
+['.rb','.rbw']</p>
+</li><li>
+<p>Third element: (String, optional) Mac file type(s), e.g. 'TEXT'</p>
+</li><li>
+<p>Example:</p>
+
+<pre>filetypes = [
+  ['Text files',       ['.txt','.doc']          ],
+  ['Text files',       [],                      'TEXT' ],
+  ['Ruby Scripts',     ['.rb'],                 'TEXT' ],
+  ['Tcl Scripts',      ['.tcl'],                'TEXT' ],
+  ['C Source Files',   ['.c','.h']              ],
+  ['All Source Files', ['.rb','.tcl','.c','.h'] ],
+  ['Image Files',      ['.gif']                 ],
+  ['Image Files',      ['.jpeg','.jpg']         ],
+  ['Image Files',      [],                      ['GIFF','JPEG']],
+  ['All files',        '*'                      ]
+]</pre>
+</li></ul>
+</li></ul>
+</li></ul>
+
+<p><strong>Returns:</strong> (String) Paths of the chosen file; 
+<code>nil</code>, if 'Cancel' was clicked.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre class="ruby"><span class="ruby-identifier">filetypes</span> = [
+    [<span class="ruby-string">'Log Files'</span>, [<span class="ruby-string">'.log'</span>]],
+    [<span class="ruby-string">'All Files'</span>, <span class="ruby-string">'*'</span>]
+  ]
+
+<span class="ruby-identifier">ans</span> = <span class="ruby-identifier">save_file</span>(<span class="ruby-string">'c:\Windows'</span>, :<span class="ruby-identifier">filetypes=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">filetypes</span>)
+</pre>
+
+<p><strong>TODO:</strong> Does initialdir work?</p>
+          
+
+          
+          <div class="method-source-code" id="save_file-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 596</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_file</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">SaveFileD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_file-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_file-method -->
+
+    
+      <div id="method-i-single_choice" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">single_choice</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="TKXXS.html#method-i-single_choice">#single_choice</a>(
+aryWithChoices, help=nil, hash=nil )</p>
+
+<p><strong>Params</strong>:</p>
+<ul><li>
+<p><code>aryWithChoices</code> - (Array) one of the following formats:</p>
+<ul><li><dl class="rdoc-list label-list"><dt> choiceStrA, choiceStrB, ...
+<dd></dd></dl>
+</li><li><dl class="rdoc-list label-list"><dt> [choiceStrA,objectA], [choiceStrB,objectB], ...  
+<dd></dd></dl>
+</li><li><dl class="rdoc-list label-list"><dt> [choiceStrA,objectA,helpStrA], [choiceStrB,objectB,helpStrB], ...
+<dd></dd></dl>
+</li></ul>
+
+<p>Quite usefull: a Proc for object.</p>
+</li><li>
+<p><code>help</code> - (String, optional) Array, with one help-String for each
+choice element!;  <code>nil</code> =&gt; No help text</p>
+</li><li>
+<p><code>hash</code> - (Hash, optional)</p>
+<ul><li>
+<p><code>:question</code> - Like above.</p>
+</li><li>
+<p><code>:help</code> - Like above.</p>
+</li><li>
+<p><code>:configSection</code> - (any String, Integer or Float or nil) Not
+important. Sets the section in the config-file, where for example the
+window size and position is stored.</p>
+</li><li>
+<p><code>:title</code> - (String) Title of the dialog window</p>
+</li><li>
+<p><code>:bd</code> - (Number as String) ?</p>
+</li><li>
+<p><code>:searchFieldHelp</code> - (String) Ballon help of the search field,</p>
+</li><li>
+<p><code>:returnChoiceAndClient</code> - returns the right side
+(<code>false</code>) or both sides (<code>true</code>) of
+<code>aryWithChoices</code>.</p>
+</li></ul>
+</li></ul>
+
+<p><strong>Returns:</strong></p>
+<ul><li>
+<p>The chosen right sides of <code>aryWithChoices</code> if
+:returnChoiceAndClient == <code>false</code> (default),</p>
+</li><li>
+<p>An Array of the chosen right and left side of <code>aryWithChoices</code>
+if :returnChoiceAndClient == <code>true</code>,</p>
+</li><li>
+<p><code>nil</code>, if 'Cancel' was clicked.</p>
+</li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre>help = ['Help #1', 'Help #2', 'Help #3']
+ans = single_choice(
+  [
+    [ &quot;You want 1?&quot;, 1],
+    [ &quot;You want 2?&quot;, 2],
+    [ &quot;You want 3?&quot;, 3],
+  ],
+  help
+)</pre>
+
+<p><strong>TODO:</strong>  Choice-search field: ä (&amp;auml;) does not work?</p>
+          
+
+          
+          <div class="method-source-code" id="single_choice-source">
+            <pre><span class="ruby-comment"># File lib/tkxxs.rb, line 336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">single_choice</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">SingleChoiceD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- single_choice-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- single_choice-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
