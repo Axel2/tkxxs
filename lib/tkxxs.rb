@@ -279,9 +279,9 @@ module TKXXS
   # * +hash+ - (Hash, optional) 
   #   * <tt>:question</tt> - Like above.
   #   * <tt>:help</tt> - Like above. 
-  #   * <tt>:configSection</tt> - (any String, Integer or Float or nil) Not
-  #     important. Sets the section in the config-file, where for example the
-  #     window size and position is stored.
+  #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
+  #     Sets the section where to store and read from config settings.
+  #     Default = nil. If key is not given, section remains unchanged.
   #   * <tt>:defaultEntry</tt> - (String) Default answer. 
   # 
   # *Returns*: (String or nil) The answer of the dialog. 'Cancel' returns nil.
@@ -310,9 +310,9 @@ module TKXXS
   # * +hash+ - (Hash, optional) 
   #   * <tt>:question</tt> - Like above.
   #   * <tt>:help</tt> - Like above. 
-  #   * <tt>:configSection</tt> - (any String, Integer or Float or nil) Not
-  #     important. Sets the section in the config-file, where for example the
-  #     window size and position is stored.
+  #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
+  #     Sets the section where to store and read from config settings.
+  #     Default = nil. If key is not given, section remains unchanged.
   #   * <tt>:title</tt> - (String) Title of the dialog window
   #   * <tt>:bd</tt> - (Number as String) ?
   #   * <tt>:searchFieldHelp</tt> - (String) Ballon help of the search field,
@@ -352,9 +352,9 @@ module TKXXS
   # * +hash+ - (Hash, optional) 
   #   * <tt>:question</tt> - Like above.
   #   * <tt>:help</tt> - Like above. 
-  #   * <tt>:configSection</tt> - (any String, Integer or Float or nil) Not
-  #     important. Sets the section in the config-file, where for example the
-  #     window size and position is stored.
+  #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
+  #     Sets the section where to store and read from config settings.
+  #     Default = nil. If key is not given, section remains unchanged.
   #   * <tt>:title</tt> - (String) Title of the dialog window
   #   * <tt>:bd</tt> - (Number as String) ?
   #   * <tt>:selectmode => :multiple</tt> - Obsolet?
@@ -397,9 +397,9 @@ module TKXXS
   #   * <tt>:defaultEntry</tt> - (String) Path, shown in the entry field. 
   #   * <tt>:validate</tt> - +true+ or +false+; if true, a valid path
   #     must be chosen, canceling the dialog is not possible.
-  #   * <tt>:configSection</tt> - (any String, Integer or Float or nil) Not
-  #     important. Sets the section in the config-file, where for example the
-  #     window size and position is stored.
+  #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
+  #     Sets the section where to store and read from config settings.
+  #     Default = nil. If key is not given, section remains unchanged.
   # 
   # *Returns:* (String) Path of the chosen dir;  +nil+, if 'Cancel' was clicked.
   # 
@@ -439,9 +439,9 @@ module TKXXS
   #   * <tt>:defaultEntry</tt> - (String) Path, shown in the entry field. 
   #   * <tt>:validate</tt> - +true+ or +false+; if true, a valid path
   #     must be chosen, canceling the dialog is not possible.
-  #   * <tt>:configSection</tt> - (any String, Integer or Float or nil) Not
-  #     important. Sets the section in the config-file, where for example the
-  #     window size and position is stored.
+  #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
+  #     Sets the section where to store and read from config settings.
+  #     Default = nil. If key is not given, section remains unchanged.
   #   * <tt>:filetypes</tt> - (Array of Arrays) Filter for the file types
   #     Format of the (inner) Arrays: 
   #     * First element: (String) Name of the file type, e.g. 'Ruby files'
@@ -499,9 +499,9 @@ module TKXXS
   #   * <tt>:defaultEntry</tt> - (String) Path, shown in the entry field. 
   #   * <tt>:validate</tt> - +true+ or +false+; if true, a valid path
   #     must be chosen, canceling the dialog is not possible.
-  #   * <tt>:configSection</tt> - (any String, Integer or Float or nil) Not
-  #     important. Sets the section in the config-file, where for example the
-  #     window size and position is stored.
+  #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
+  #     Sets the section where to store and read from config settings.
+  #     Default = nil. If key is not given, section remains unchanged.
   #   * <tt>:filetypes</tt> - (Array of Arrays) Filter for the file types
   #     Format of the (inner) Arrays: 
   #     * First element: (String) Name of the file type, e.g. 'Ruby files'
@@ -560,9 +560,9 @@ module TKXXS
   #   * <tt>:defaultEntry</tt> - (String) Path, shown in the entry field. 
   #   * <tt>:validate</tt> - +true+ or +false+; if true, a valid path
   #     must be chosen, canceling the dialog is not possible.
-  #   * <tt>:configSection</tt> - (any String, Integer or Float or nil) Not
-  #     important. Sets the section in the config-file, where for example the
-  #     window size and position is stored.
+  #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
+  #     Sets the section where to store and read from config settings.
+  #     Default = nil. If key is not given, section remains unchanged.
   #   * <tt>:defaultextension</tt> - ??? (Don't change).
   #   * <tt>:filetypes</tt> - (Array of Arrays) Filter for the file types
   #     Format of the (inner) Arrays: 

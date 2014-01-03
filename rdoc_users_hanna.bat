@@ -12,5 +12,5 @@ echo Working dir:
 cd
 
 call pik sw 193
-rdoc.bat -t TKXXS --force-update -f hanna --op ./doc  -x lib/tkxxs/tkxxs_classes.rb -x lib/tkxxs/samples --main ./README.txt ./README.txt ./lib/tkxxs.rb
+rdoc.bat -t TKXXS --force-update -f hanna --op ./doc  -x lib/tkxxs/tkxxs_classes.rb -x lib/tkxxs/samples --main ./README.rdoc ./README.rdoc ./lib/tkxxs.rb
 

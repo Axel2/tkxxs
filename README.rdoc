@@ -1,6 +1,6 @@
 = TKXXS
 
-* https://github.com/Axel2
+* https://github.com/Axel2/tkxxs
 
 == References
 
@@ -12,7 +12,7 @@ TKXXS_CLASSES is intended for developers only.
 
 == Description
 
-TKXXS provides a very simple and very easy to use GUI (graphical user interface) for Ruby; It gives you a persistent output window and popping up (modal) dialogs for input; For a screenshot, see: images/screenshot.png; Tested on Windows, only.
+TKXXS provides a very simple and very easy to use GUI (graphical user interface) for Ruby; It gives you a persistent output window and popping up (modal) dialogs for input; For a screenshot, see: <tt>https://github.com/Axel2/tkxxs/blob/master/images/screenshot.png</tt>; Tested on Windows, only.
 
 TKXXS shall:
 
@@ -89,6 +89,38 @@ You close the application simply by clicking the close-icon on top of the output
 
 See samples/big_example.rb
 
+
+== configSection
+
+Normally, you need not care about it. 
+
+The hash-argument of the dialog methods take as key <tt>:configSection</tt>. The value of this key sets the section name of the configuration file, where configuration setting of this dialog are stored and read from. Configuration settings are, for example: Window size and position, and recent dirs/files and favorite dirs/files.
+
+Key may be String, Integer, Float or nil, but not Symbol. nil is the default section.
+* Setting section: Conf#section=
+* Reading the actual section: Conf#section
+* Configuration file path is: Conf#filename (It's YAML)
+
+The config section remains unchanged, unless it is set to a new value by either using:
+  Conf#section = ...
+or by setting the <tt>:configSection</tt> of the hash-argument of the dialog methods. 
+
+You can use <tt>:configSection</tt> for example, if you want to have different favorite dirs for two different choose_dir-dialogs. Example code:
+
+  CONF = Conf.new # This is set inside TKXXS
+  ...
+  old_section = CONF.section
+  
+  left_dir = choose_dir( 
+    :configSection=>'left'
+  )
+  
+  right_dir = choose_dir( 
+    :configSection=>'right',
+  )
+  
+  CONF.section = old_section
+  ...
 
 == Installation
 

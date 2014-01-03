@@ -3,7 +3,7 @@ CONTRIBUTORS
 History.txt
 LICENSE
 Manifest.txt
-README.txt
+README.rdoc
 Rakefile
 ext/readme.txt
 ext/tkballoonhelp.rb
