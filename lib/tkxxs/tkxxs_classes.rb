@@ -95,7 +95,7 @@ module TKXXS_CLASSES
   # Arguments of args_2: 'help,hash,question' and then the (optional)
   # hash-keys, which shall be assigned to the additional variables.
   # :help and :question can be put at arbitrary position, or omitted.
-  # hash _must_ have: :configSection, :question. 
+  # hash _must_ have:  :question. 
   # 
   # If the variable +help+ and/or +question+ are already set (not
   # equal +nil+), then they leave unchanged. 
@@ -117,7 +117,7 @@ module TKXXS_CLASSES
   # * +question+ now set, because it was _not_ defined before;
   # * +title+ set to <tt>hash[:title]</tt>
   def TKXXS_CLASSES.args_2( help,hash,question,*keys )
-    hash.delete(:configSection)
+    hash.delete(:configSection) if hash[:configSection]
     q = hash.delete(:question)
     question = q unless question
     h = hash.delete(:help)
@@ -178,17 +178,16 @@ module TKXXS_CLASSES
     def initialize( question=nil, help=nil, hash=nil )
       question, help, hash = TKXXS_CLASSES.args_1(question, help, hash)
 
-      # Must always include:  :question, :help, :configSection
+      # Must always include:  :question, :help
       hash = { # Default values
         :question => "?",
         :help => nil,
-        :configSection => nil,
         :defaultEntry => '', 
       }.merge(hash)
   
       # Necessary, because hash[:configSection]  is deleted later on
       # with +args_2+.
-      CONF.section = hash[:configSection]  if CONF  # ?
+      CONF.section = hash[:configSection] if CONF && hash[:configSection]
     
       help, hash, question, defaultEntry = 
         TKXXS_CLASSES.args_2(help,hash,question,:defaultEntry)
@@ -207,7 +206,6 @@ module TKXXS_CLASSES
         unless teardownDone
           if CONF
             CONF[:dialogGeom] = @dialog.geometry
-            CONF.section = nil
           end
           goOn.value = '1' # !
           teardownDone = true
@@ -299,17 +297,16 @@ module TKXXS_CLASSES
     def initialize( question=nil, help=nil, hash=nil )
       question, help, hash = TKXXS_CLASSES.args_1(question, help, hash)
 
-      # Must always include:  :question, :help, :configSection
+      # Must always include:  :question, :hel
       hash = {
         :question => "?",
         :help => nil,
-        :configSection => nil,
         :title => "Please enter your answer..."
       }.merge(hash)
   
       # Necessary, because hash[:configSection]  is deleted later on
       # in args_2.
-      CONF.section = hash[:configSection]  if CONF  # ?
+      CONF.section = hash[:configSection] if CONF && hash[:configSection]
     
       # help, hash, question, title = 
       #   TKXXS_CLASSES.args_2( help, hash, question, :title)
@@ -331,7 +328,6 @@ module TKXXS_CLASSES
         unless teardownDone
           if CONF
             CONF[:dialogGeom] = @dialog.geometry
-            CONF.section = nil
           end
           goOn.value = '1' # !
           teardownDone = true
@@ -443,11 +439,10 @@ module TKXXS_CLASSES
 
       @allChoices, @allClients, @allHelp = all_choices_clients_help(aryWithChoices)
 
-      # Must always include:  :question, :help, :configSection
+      # Must always include:  :question, :help
       hash = {
         :question => "Choose one by single-click",
         :help => nil,
-        :configSection => nil,
         :title => 'Choose one',
         :bd=>'2', # TODO: noch benötigt?
         :searchFieldHelp => "Enter RegExp for filter list here\n(not case sensitive)",
@@ -456,7 +451,8 @@ module TKXXS_CLASSES
 
       # Necessary, because hash[:configSection]  is deleted later on
       # in args_2.
-      CONF.section = hash[:configSection]  if CONF  # ?
+
+      CONF.section = hash[:configSection] if CONF && hash[:configSection]
     
       # help, hash, question, title = 
       #   TKXXS_CLASSES.args_2( help, hash, question, :title)
@@ -481,7 +477,6 @@ module TKXXS_CLASSES
           $tkxxs_.delete(object_id)
           if CONF
             CONF[:dialogGeom] = @dialog.geometry
-            CONF.section = nil
             ##/ CONF.save
           end
           teardownDone = true
@@ -693,14 +688,13 @@ module TKXXS_CLASSES
         :question => "Choose multiple:",
         :help => nil,
         :bd=>'2',
-        :configSection => nil,
         :title=>'Please choose multiple...',
         :returnChoiceAndClient=>false
       }.merge(hash)
 
       # Necessary, because hash[:configSection]  is deleted later on
       # in args_2.
-      CONF.section = hash[:configSection]  if CONF  # ?
+      CONF.section = hash[:configSection] if CONF && hash[:configSection]
 
       help,hash,question,title,searchFieldHelp,@returnChoiceAndClient= 
         TKXXS_CLASSES.args_2(help,hash,question,:title,:searchFieldHelp,:returnChoiceAndClient)
@@ -739,7 +733,6 @@ module TKXXS_CLASSES
           goOn.value = '1' # !
           if CONF
             CONF[:dialogGeom] = @dialog.geometry
-            CONF.section = nil
           end
           teardownDone = true
         end # unless
@@ -884,13 +877,12 @@ module TKXXS_CLASSES
       initialdir, help, hash = 
         TKXXS_CLASSES.args_1( initialdir,help,hash )
 
-      # Must always include:  :question, :help, :configSection
+      # Must always include:  :question, :help
       hash = {
         :mode=>:openfiles,
         :initialdir => Dir.pwd,
         :question => "Please choose the desired files:",
         :help => nil,
-        :configSection => nil,
         :title => 'Choose Files',
         :defaultEntry => '',
         :validate=>nil,
@@ -898,8 +890,7 @@ module TKXXS_CLASSES
 
       # Necessary, because hash[:configSection]  is deleted later on
       # in args_2.
-      CONF.section = hash[:configSection]  if CONF  # ?
-    
+      CONF.section = hash[:configSection] if CONF && hash[:configSection]
       help,hash,question,initialdirH,mode,defaultEntry,@validate = 
         TKXXS_CLASSES.args_2(help,hash,question,:initialdir,:mode,:defaultEntry,:validate)
       hash[:initialdir] = initialdir || initialdirH  # Tja, etwas umstaendlich
@@ -910,6 +901,12 @@ module TKXXS_CLASSES
       @ans = nil
       @goOn = goOn = TkVariable.new 
       # Because you cannot use instance-vars in procs. TODO: smarter way?
+      old_section = CONF.section
+      CONF.section = nil
+      @recent_dirs_size = CONF[:recentDirsSize]
+      @recent_files_size = CONF[:recentFilessSize]
+      CONF.section = old_section
+
 
       Tk.update # Show any calling widget first to make it lower than @dialog
 
@@ -1029,7 +1026,6 @@ module TKXXS_CLASSES
         $tkxxs_.delete(object_id)
         if CONF   # Save settings (e.g., window size)
           CONF[:pathChooserGeom] = @dialog.geometry
-          CONF.section = nil
           ##/ CONF.save
         end
         @teardownDone = true
@@ -1379,7 +1375,8 @@ module TKXXS_CLASSES
       paths.compact!
       dirs = paths + dirs
       dirs.uniq!
-      CONF[:recentDirs] = dirs[0, CONF[:recentDirsSize] ]
+      ##binding.pry
+      CONF[:recentDirs] = dirs[0, @recent_dirs_size ]
       dirs
     end # recent_dirs
     
@@ -1390,7 +1387,7 @@ module TKXXS_CLASSES
       paths = [paths] if paths.class == String
       files = paths + files
       files.uniq!
-      CONF[:recentFiles] = files[0, CONF[:recentFilesSize] ]
+      CONF[:recentFiles] = files[0, @recent_files_size ]
       files
     end # recent_files
     

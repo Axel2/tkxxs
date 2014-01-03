@@ -25,6 +25,7 @@ STDOUT.puts "CONFIG-FILENAME is: #{ CONF.filename.gsub('/',$FILE_SEP) }"
 require 'Platform'  unless defined?(Platform::OS)
 require 'tkxxs/version'
 require 'tkxxs/tkxxs_classes'
+require 'pry'
 
 ##########################################################################
 ##########################################################################
