@@ -70,8 +70,9 @@ module TKXXS
   # This means, if you have an existing application which uses +puts+
   # to write to the console, you can easily make it to write to the
   # Output Window!
-  # BUT: Unfortunately, this is not compatible with OCRA (as of 2013-12).
-  # When you want to use OCRA, you cannot use this redirection of stdout.
+  # BUT: Unfortunately, this is not compatible with OCRA and pry (as
+  # of 2013-12). When you want to use OCRA or pry, you cannot use this
+  # redirection of stdout.
   class OutW < TKXXS_CLASSES::TextW
     CONF = nil  unless defined?(CONF)
     

@@ -902,9 +902,9 @@ module TKXXS_CLASSES
       @goOn = goOn = TkVariable.new 
       # Because you cannot use instance-vars in procs. TODO: smarter way?
       old_section = CONF.section
-      CONF.section = nil
+      CONF.section = nil # Following always stored in section=nil
       @recent_dirs_size = CONF[:recentDirsSize]
-      @recent_files_size = CONF[:recentFilessSize]
+      @recent_files_size = CONF[:recentFilesSize]
       CONF.section = old_section
 
 
