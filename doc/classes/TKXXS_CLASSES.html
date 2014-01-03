@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>TKXXS_CLASSES</title>
+    <meta content='text/html; charset=CP850' http-equiv='Content-Type'>
+    <link href='../css/style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>module</span>
+          TKXXS_CLASSES
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a target="docwin" href="../files/lib/tkxxs/tkxxs_classes_rb.html">lib/tkxxs/tkxxs_classes.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong><a target="docwin" href="../files/lib/tkxxs/tkxxs_classes_rb.html">tkxxs_classes.rb</a></strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            
+            <p>Creates dialogs for <a href="TKXXS.html">TKXXS</a></p>
+          </div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>Public Class</h3>
+            <ol>
+              <li><a target="docwin" href="#method-c-args_1">args_1</a></li>
+              <li><a target="docwin" href="#method-c-args_2">args_2</a></li>
+            </ol>
+          </div>
+          <div id='context'>
+          </div>
+          <div id='class-list'>
+            <h2>Classes and Modules</h2>
+            <ol>
+              <li><a target="docwin" href="TKXXS_CLASSES/AskMultiLineD.html">TKXXS_CLASSES::AskMultiLineD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/AskSingleLineD.html">TKXXS_CLASSES::AskSingleLineD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/ChooseDirD.html">TKXXS_CLASSES::ChooseDirD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/FileAndDirChooser.html">TKXXS_CLASSES::FileAndDirChooser</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/MultiChoiceD.html">TKXXS_CLASSES::MultiChoiceD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/OpenFileD.html">TKXXS_CLASSES::OpenFileD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/OpenFilesD.html">TKXXS_CLASSES::OpenFilesD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/SaveFileD.html">TKXXS_CLASSES::SaveFileD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/SingleChoiceD.html">TKXXS_CLASSES::SingleChoiceD</a></li>
+              <li><a target="docwin" href="TKXXS_CLASSES/TextW.html">TKXXS_CLASSES::TextW</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public Class methods</h2>
+              <div class='method public-class' id='method-method-c-args_1'>
+                <a name='method-c-args_1'></a>
+                <div class='synopsis'>
+                  <span class='name'>args_1</span>
+                  <span class='arguments'>( *args )</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>Purpose:</p>
+                  
+                  <pre>Interpret last argument always as +Hash#, independent from the&#x000A;number of arguments:</pre>
+                  <ul><li>
+                  <p>Searches for the first argument which is a <a href="Hash.html">Hash</a>,
+                  from right to left, starting with the last argument. (TODO: Why not simply
+                  detect if the last argument is a <a href="Hash.html">Hash</a>?)</p>
+                  </li><li>
+                  <p>If <a href="Hash.html">Hash</a> exists:</p>
+                  </li></ul>
+                  
+                  <p>** Move the hash to the last element of args. ** Set the element, where the
+                  <a href="Hash.html">Hash</a> comes from to nil, if it was</p>
+                  
+                  <pre>not the last element.</pre>
+                  
+                  <p>** All other elements remain unchanged.</p>
+                  <ul><li>
+                  <p>If no <a href="Hash.html">Hash</a> exist:</p>
+                  </li></ul>
+                  
+                  <p>** Sets the last element of args to {}  ** All other elements remain
+                  unchanged.</p>
+                  
+                  <p><strong>Returns:</strong> The rearranged args.</p>
+                  
+                  <p>Example:</p>
+                  
+                  <pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">m1</span>( <span class="ruby-identifier">c</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-identifier">b</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-identifier">a</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-identifier">h</span>=<span class="ruby-keyword">nil</span> )&#x000A;  <span class="ruby-identifier">c</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">a</span>, <span class="ruby-identifier">hash</span> = <span class="ruby-identifier">args_1</span>(<span class="ruby-identifier">c</span>,<span class="ruby-identifier">b</span>,<span class="ruby-identifier">a</span>,<span class="ruby-identifier">h</span>)&#x000A;  <span class="ruby-identifier">p</span> [<span class="ruby-identifier">c</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">a</span>, <span class="ruby-identifier">hash</span>]&#x000A;&#x000A;  <span class="ruby-identifier">hash</span> = {:<span class="ruby-identifier">a=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'aa'</span>,&#x000A;  :<span class="ruby-identifier">b=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'bb'</span>,&#x000A;  :<span class="ruby-identifier">c=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'cc'</span>&#x000A;  }.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">hash</span>)&#x000A;&#x000A;  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">hash</span>[:<span class="ruby-identifier">c</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">c</span>  &#x000A;  <span class="ruby-identifier">b</span> = <span class="ruby-identifier">hash</span>[:<span class="ruby-identifier">b</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">b</span>  &#x000A;  <span class="ruby-identifier">a</span> = <span class="ruby-identifier">hash</span>[:<span class="ruby-identifier">a</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">a</span> &#x000A;  <span class="ruby-keyword">nil</span>&#x000A;<span class="ruby-keyword">end</span> <span class="ruby-comment"># m1</span>&#x000A;&#x000A;<span class="ruby-identifier">m1</span>(:<span class="ruby-identifier">c</span>,:<span class="ruby-identifier">b</span>,:<span class="ruby-identifier">a</span>, {:<span class="ruby-identifier">h=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'hh'</span>}) <span class="ruby-comment"># =&gt; [:c, :b, :a, {:h=&gt;&quot;hh&quot;}] </span>&#x000A;<span class="ruby-identifier">m1</span>(:<span class="ruby-identifier">c</span>, {:<span class="ruby-identifier">h=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'hh'</span>})       <span class="ruby-comment"># =&gt; [:c, nil, nil, {:h=&gt;&quot;hh&quot;}] </span>&#x000A;<span class="ruby-identifier">m1</span>(:<span class="ruby-identifier">c</span>)                   <span class="ruby-comment"># =&gt; [:c, nil, nil, {}] </span>&#x000A;<span class="ruby-identifier">m1</span>()                     <span class="ruby-comment"># =&gt; [nil, nil, nil, {}]</span></pre>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-c-args_1-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-c-args_1-source'><span class="ruby-comment"># File lib/tkxxs/tkxxs_classes.rb, line 64</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-constant">TKXXS_CLASSES</span>.<span class="ruby-identifier">args_1</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">reverse</span>&#x000A;  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each_with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">arg</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>&#x000A;    <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Hash</span>&#x000A;      <span class="ruby-identifier">args</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword">nil</span>&#x000A;      <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">arg</span>&#x000A;      <span class="ruby-keyword">break</span>&#x000A;    <span class="ruby-keyword">end</span>&#x000A;  }&#x000A;  <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>] =&#x000A;  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]&#x000A;    {}&#x000A;  <span class="ruby-keyword">else</span>&#x000A;    <span class="ruby-comment">## Marshal.load(Marshal.dump( args[0] ) ) # Doesn't work because of Proc</span>&#x000A;    <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">dup2!</span> <span class="ruby-comment"># args[0] must always be a Hash</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">reverse</span>&#x000A;  <span class="ruby-identifier">args</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-method-c-args_2'>
+                <a name='method-c-args_2'></a>
+                <div class='synopsis'>
+                  <span class='name'>args_2</span>
+                  <span class='arguments'>( help,hash,question,*keys )</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>Set the value of new variables from the values of the hash.</p>
+                  
+                  <p>New variables are <em>always</em>:  <code>question</code> and
+                  <code>help</code>.</p>
+                  
+                  <p>'hash' gets modified.</p>
+                  
+                  <p>On the left side of the equal sign:  <em>always</em> 'help, hash,
+                  question', thereafter the additional variables.</p>
+                  
+                  <p>Arguments of <a href="TKXXS_CLASSES.html#method-c-args_2">::args_2</a>:
+                  'help,hash,question' and then the (optional) hash-keys, which shall be
+                  assigned to the additional variables. :help and :question can be put at
+                  arbitrary position, or omitted. hash <em>must</em> have:  :question.</p>
+                  
+                  <p>If the variable <code>help</code> and/or <code>question</code> are already
+                  set (not equal <code>nil</code>), then they leave unchanged.</p>
+                  
+                  <p>EXAMPLE:</p>
+                  
+                  <pre class="ruby"><span class="ruby-identifier">help</span> = <span class="ruby-string">'h'</span>&#x000A;<span class="ruby-identifier">hash</span> = {&#x000A;  :<span class="ruby-identifier">help=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'heeelp'</span>, &#x000A;  :<span class="ruby-identifier">question=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'MyQuestion'</span>, &#x000A;  :<span class="ruby-identifier">title=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'MyTitle'</span>, &#x000A;  :<span class="ruby-constant">SomethingElse=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'bla'</span>&#x000A;}&#x000A;<span class="ruby-identifier">help</span>, <span class="ruby-identifier">hash</span>, <span class="ruby-identifier">question</span>, <span class="ruby-identifier">title</span> = &#x000A;        <span class="ruby-constant">TKXXS_CLASSES</span>.<span class="ruby-identifier">args_2</span>( <span class="ruby-identifier">help</span>, <span class="ruby-identifier">hash</span>, <span class="ruby-identifier">question</span>, :<span class="ruby-identifier">title</span>)&#x000A;<span class="ruby-comment"># =&gt; [&quot;h&quot;, {:SomethingElse=&gt;&quot;bla&quot;}, &quot;MyQuestion&quot;, &quot;MyTitle&quot;]</span></pre>
+                  <ul><li>
+                  <p>'h' in <code>help</code> <em>not</em> overwritten, because
+                  <code>help</code> was defined before;</p>
+                  </li><li>
+                  <p>Every key in <code>hash</code> deleted, which corresponds to the args of
+                  <code>args_2</code>;</p>
+                  </li><li>
+                  <p><code>question</code> now set, because it was <em>not</em> defined before;</p>
+                  </li><li>
+                  <p><code>title</code> set to <code>hash[:title]</code></p>
+                  </li></ul>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-c-args_2-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-c-args_2-source'><span class="ruby-comment"># File lib/tkxxs/tkxxs_classes.rb, line 118</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-constant">TKXXS_CLASSES</span>.<span class="ruby-identifier">args_2</span>( <span class="ruby-identifier">help</span>,<span class="ruby-identifier">hash</span>,<span class="ruby-identifier">question</span>,*<span class="ruby-identifier">keys</span> )&#x000A;  <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:configSection</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-value">:configSection</span>]&#x000A;  <span class="ruby-identifier">q</span> = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:question</span>)&#x000A;  <span class="ruby-identifier">question</span> = <span class="ruby-identifier">q</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">question</span>&#x000A;  <span class="ruby-identifier">h</span> = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:help</span>)&#x000A;  <span class="ruby-identifier">help</span> = <span class="ruby-identifier">h</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">help</span>&#x000A;&#x000A;  <span class="ruby-identifier">values</span> = [<span class="ruby-identifier">help</span>,<span class="ruby-identifier">hash</span>,<span class="ruby-identifier">question</span>]&#x000A;  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>&#x000A;    <span class="ruby-identifier">val</span> = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)&#x000A;    <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">val</span>&#x000A;  }&#x000A;  <span class="ruby-identifier">values</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">hash</span>&#x000A;  <span class="ruby-identifier">values</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a target="docwin" href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

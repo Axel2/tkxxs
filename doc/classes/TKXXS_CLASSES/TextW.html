@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>TKXXS_CLASSES::TextW</title>
+    <meta content='text/html; charset=CP850' http-equiv='Content-Type'>
+    <link href='../../css/style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>class</span>
+          TKXXS_CLASSES::TextW
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a target="docwin" href="../../files/lib/tkxxs/tkxxs_classes_rb.html">lib/tkxxs/tkxxs_classes.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong><a target="docwin" href="../TKXXS_CLASSES.html">TKXXS_CLASSES</a></strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'></div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>Public Class</h3>
+            <ol>
+              <li><a target="docwin" href="#method-c-new">new</a></li>
+            </ol>
+          </div>
+          <div id='context'>
+            <div id='includes'>
+              <h2>Included modules</h2>
+              <ol>
+                <li>Tk::Tile</li>
+              </ol>
+            </div>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public Class methods</h2>
+              <div class='method public-class' id='method-method-c-new'>
+                <a name='method-c-new'></a>
+                <div class='synopsis'>
+                  <span class='name'>new</span>
+                  <span class='arguments'>( parent, hash={} )</span>
+                </div>
+                <div class='description'>
+                  
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-c-new-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-c-new-source'><span class="ruby-comment"># File lib/tkxxs/tkxxs_classes.rb, line 138</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">hash</span>={} )&#x000A;  <span class="ruby-comment">#----  Frame </span>&#x000A;  <span class="ruby-ivar">@frame</span> = <span class="ruby-constant">Frame</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent</span>) {<span class="ruby-identifier">padding</span> <span class="ruby-string">&quot;3 3 3 3&quot;</span>}.&#x000A;    <span class="ruby-identifier">pack</span>(<span class="ruby-value">:fill=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:both</span>, <span class="ruby-value">:expand=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>)&#x000A;&#x000A;  <span class="ruby-identifier">hash</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>( <span class="ruby-identifier">hash</span> ) ) <span class="ruby-comment"># Should work because never uses Proc</span>&#x000A;&#x000A;  <span class="ruby-identifier">hash</span> = {&#x000A;    <span class="ruby-value">:font=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'&quot;Courier New&quot; 10'</span>,&#x000A;    <span class="ruby-value">:wrap=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'word'</span>,&#x000A;    <span class="ruby-value">:bd=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'2'</span>&#x000A;  }.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">hash</span>)&#x000A;  &#x000A;  <span class="ruby-comment">#----  self = TkText</span>&#x000A;  <span class="ruby-keyword">super</span>(<span class="ruby-ivar">@frame</span>, <span class="ruby-identifier">hash</span>) &#x000A;  &#x000A;  <span class="ruby-comment">#----  Scrollbars</span>&#x000A;  <span class="ruby-identifier">sy</span> = <span class="ruby-constant">Scrollbar</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@frame</span>)&#x000A;  <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-string">'side'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'right'</span>, <span class="ruby-string">'fill'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'y'</span>)&#x000A;  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">yscrollbar</span>(<span class="ruby-identifier">sy</span>)&#x000A;  &#x000A;  <span class="ruby-identifier">sx</span> = <span class="ruby-constant">Scrollbar</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@frame</span>)&#x000A;  <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-string">'side'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'bottom'</span>, <span class="ruby-string">'fill'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'x'</span>)&#x000A;  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xscrollbar</span>(<span class="ruby-identifier">sx</span>)&#x000A;  &#x000A;  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-string">'expand'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'yes'</span>, <span class="ruby-string">'fill'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'both'</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a target="docwin" href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>
