@@ -122,62 +122,48 @@ module TKXXS
       @tkxxs_buffer = StringIO.new
 
     end # initialize
-    
+
+    def output_with(method, *args, tag)
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.send(method, *args)
+      self.insert(:end, @tkxxs_buffer.string, tag)
+      self.see :end
+    end
+
     ##################################################################
     # Like Kernel::puts. Write a String to the Output Window.
     def puts( *args )
-      @tkxxs_buffer.reopen
-      @tkxxs_buffer.puts args
-      self.insert(:end, @tkxxs_buffer.string)
-      self.see :end
-      ##/ self.update # Nötig?
+      output_with(:puts, *args, nil)
     end # puts
 
     ##################################################################
     # puts, formated as heading level 2 
     def puts_h2( *args )
-      @tkxxs_buffer.reopen
-      @tkxxs_buffer.puts args
-      self.insert(:end, @tkxxs_buffer.string, @tagH2)
+      output_with(:puts, *args, @tagH2)
     end # puts_h2
     
     ##################################################################
     # Like Kernel::print. Print a String to the Output Window.
     def print( *args )
-      @tkxxs_buffer.reopen
-      @tkxxs_buffer.print args
-      self.insert('end', @tkxxs_buffer.string)
-      self.see :end
-      ##/ self.update # Nötig?
+      output_with(:print, *args, nil)
     end # print
 
     ##################################################################
     # Like Kernel::p. For each object, directly writes obj.inspect
     # followed by a newline to the program's standard output.
     def p( arg )
-      @tkxxs_buffer.reopen
-      @tkxxs_buffer.puts arg.inspect
-      self.insert('end', @tkxxs_buffer.string)
-      self.see :end
+      output_with(:puts, arg.inspect, nil)
     end # p
 
     ##################################################################
     # Like Kernel::printf. Print object based on given format string.
     def printf( *args )
-      @tkxxs_buffer.reopen
-      @tkxxs_buffer.printf *args
-      self.insert('end', @tkxxs_buffer.string)
-      self.see :end
+      output_with(:printf, *args, nil)
     end # printf
 
     # :nodoc:
     def write( str )
-      ##self.insert(:end, "\n" + str)
-      @tkxxs_buffer.reopen
-      @tkxxs_buffer.write str
-      self.insert(:end, @tkxxs_buffer.string)
-      self.see :end
-      ##/ self.update # Nötig?
+      output_with(:write, str, nil)
     end # write
 
     ##########################################################################
