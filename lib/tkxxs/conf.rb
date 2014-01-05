@@ -10,7 +10,7 @@ $:.uniq!
 
 require 'fileutils'
 require 'yaml'
-require 'Platform'
+require 'platform'
 
 class Object 
   ##################################################################

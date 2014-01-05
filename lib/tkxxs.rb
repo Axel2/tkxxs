@@ -22,7 +22,7 @@ require( File.dirname(DIR_OF_TKXXS) + '/ext/tkballoonhelp.rb' )
 CONF = Conf.new unless defined?(CONF)
 STDOUT.puts "CONFIG-FILENAME is: #{ CONF.filename.gsub('/',$FILE_SEP) }" 
 ##/ end
-require 'Platform'  unless defined?(Platform::OS)
+require 'platform'  unless defined?(Platform::OS)
 require 'tkxxs/version'
 require 'tkxxs/tkxxs_classes'
 require 'pry'
