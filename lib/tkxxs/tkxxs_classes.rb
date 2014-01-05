@@ -297,7 +297,7 @@ module TKXXS_CLASSES
     def initialize( question=nil, help=nil, hash=nil )
       question, help, hash = TKXXS_CLASSES.args_1(question, help, hash)
 
-      # Must always include:  :question, :hel
+      # Must always include:  :question, :help
       hash = {
         :question => "?",
         :help => nil,
@@ -1375,7 +1375,6 @@ module TKXXS_CLASSES
       paths.compact!
       dirs = paths + dirs
       dirs.uniq!
-      ##binding.pry
       CONF[:recentDirs] = dirs[0, @recent_dirs_size ]
       dirs
     end # recent_dirs
