@@ -160,6 +160,13 @@ module TKXXS
       self.see :end
     end
 
+    def printf( *args )
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.printf *args
+      self.insert('end', @tkxxs_buffer.string)
+      self.see :end
+    end
+
     # :nodoc:
     def write( str )
       ##self.insert(:end, "\n" + str)
