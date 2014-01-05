@@ -12,7 +12,7 @@ TKXXS_CLASSES is intended for developers only.
 
 == Description
 
-TKXXS provides a very simple and very easy to use GUI (graphical user interface) for Ruby; It gives you a persistent output window and popping up (modal) dialogs for input; For a screenshot, see: <tt>https://github.com/Axel2/tkxxs/blob/master/images/screenshot.png</tt>; I tested it on Windows, only; Got user report, that it works on Ubuntu, too.
+TKXXS provides a very simple and very easy to use GUI (graphical user interface) for Ruby; It gives you a persistent output window and popping up (modal) dialogs for input; For a screenshot, see: https://github.com/Axel2/tkxxs/blob/master/images/screenshot.png; I tested it on Windows, only; Got user report, that it works on Ubuntu, too.
 
 TKXXS shall:
 
