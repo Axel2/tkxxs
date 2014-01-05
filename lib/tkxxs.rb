@@ -146,12 +146,19 @@ module TKXXS
     def print( *args )
       @tkxxs_buffer.reopen
       @tkxxs_buffer.print args
-      self.insert('end', @tkxxs_buffer)
+      self.insert('end', @tkxxs_buffer.string)
       self.see :end
       ##/ self.update # Nötig?
     end # print
-    
+
     # TODO def p()
+
+    def p( arg )
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.puts arg.inspect
+      self.insert('end', @tkxxs_buffer.string)
+      self.see :end
+    end
 
     # :nodoc:
     def write( str )
