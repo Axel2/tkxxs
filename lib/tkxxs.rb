@@ -151,19 +151,24 @@ module TKXXS
       ##/ self.update # Nötig?
     end # print
 
+    ##################################################################
+    # Like Kernel::p. For each object, directly writes obj.inspect
+    # followed by a newline to the program's standard output.
     def p( arg )
       @tkxxs_buffer.reopen
       @tkxxs_buffer.puts arg.inspect
       self.insert('end', @tkxxs_buffer.string)
       self.see :end
-    end
+    end # p
 
+    ##################################################################
+    # Like Kernel::printf. Print object based on given format string.
     def printf( *args )
       @tkxxs_buffer.reopen
       @tkxxs_buffer.printf *args
       self.insert('end', @tkxxs_buffer.string)
       self.see :end
-    end
+    end # printf
 
     # :nodoc:
     def write( str )
