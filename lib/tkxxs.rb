@@ -144,12 +144,9 @@ module TKXXS
     ##################################################################
     # Like Kernel::print. Print a String to the Output Window.
     def print( *args )
-      if args.class == Array
-        args.map! {|a|  a.to_s   }
-        args = args.join(" ") 
-      end
-      str = args.chomp("\n") + "\n"
-      self.insert('end', str)
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.print args
+      self.insert('end', @tkxxs_buffer)
       self.see :end
       ##/ self.update # Nötig?
     end # print
