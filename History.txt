@@ -1,6 +1,8 @@
-=== 0.1.2 / 2013-01-03
+=== 0.1.2 / 2013-01-05
 
-* Fixed a bug in handling configSection
+* Made it work on Ubuntu (Many thanks to Abinoam P. Marques Jr.)
+* Fixed a bug in handling configSection. (Can be used now.)
+* Updated documentation and readme.
 
 === 0.1.1 / 2014-01-02
 

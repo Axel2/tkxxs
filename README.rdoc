@@ -12,7 +12,7 @@ TKXXS_CLASSES is intended for developers only.
 
 == Description
 
-TKXXS provides a very simple and very easy to use GUI (graphical user interface) for Ruby; It gives you a persistent output window and popping up (modal) dialogs for input; For a screenshot, see: <tt>https://github.com/Axel2/tkxxs/blob/master/images/screenshot.png</tt>; Tested on Windows, only.
+TKXXS provides a very simple and very easy to use GUI (graphical user interface) for Ruby; It gives you a persistent output window and popping up (modal) dialogs for input; For a screenshot, see: <tt>https://github.com/Axel2/tkxxs/blob/master/images/screenshot.png</tt>; I tested it on Windows, only; Got user report, that it works on Ubuntu, too.
 
 TKXXS shall:
 
@@ -25,7 +25,7 @@ TKXXS shall:
 
 
 Drawbacks:
-* I'v tested it only on Windows. Other operating system probably will need modifications, which I would like to merge in.
+* I'v tested it only on Windows, but got user report, that it works on Ubuntu, too.l
 * For sure some more drawbacks which I'm not aware of now.
 
 
@@ -126,7 +126,7 @@ You can use <tt>:configSection</tt> for example, if you want to have different f
 
 === Prerequisites
 
-* Tested only on Windows
+* Tested only on Windows (but user reported that it works on Ubuntu, too.)
 * Ruby 1.8.7 or 1.9.x with TK (e.g. RubyInstaller)
 * gem Platform (starting with capital letter "P"!)
 

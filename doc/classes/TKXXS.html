@@ -122,7 +122,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-ask_single_line-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-ask_single_line-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 295</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask_single_line</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">AskSingleLineD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-ask_single_line-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 296</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask_single_line</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">AskSingleLineD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-method-i-choose_dir'>
@@ -182,7 +182,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-choose_dir-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-choose_dir-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 416</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">choose_dir</span>( *<span class="ruby-identifier">args</span> ) <span class="ruby-comment"># initialdir</span>&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">ChooseDirD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-choose_dir-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 417</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">choose_dir</span>( *<span class="ruby-identifier">args</span> ) <span class="ruby-comment"># initialdir</span>&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">ChooseDirD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-method-i-messageBoxExamples'>
@@ -198,7 +198,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-messageBoxExamples-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-messageBoxExamples-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 249</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">messageBoxExamples</span>&#x000A;  <span class="ruby-comment"># TODO: Is this usefull?</span>&#x000A;  <span class="ruby-comment">##################################################################</span>&#x000A;  <span class="ruby-comment"># :type: :abortretryignore, :ok, :okcancel, :retrycancel, :yesno, :yesnocancel</span>&#x000A;  <span class="ruby-comment"># :icon: :error, :info, :question or :warning (default: info)</span>&#x000A;  <span class="ruby-comment"># :detail: Specifies an auxiliary message to the main message given by</span>&#x000A;  <span class="ruby-comment">#   the -message option. Where supported by the underlying OS, the</span>&#x000A;  <span class="ruby-comment">#   message detail will be presented in a less emphasized font than the</span>&#x000A;  <span class="ruby-comment">#   main message.</span>&#x000A;  <span class="ruby-comment"># Returns: A String describing the pressed button (&quot;ok&quot;, &quot;cancel&quot;, &quot;retry&quot;, &quot;ignore&quot;, ...)</span>&#x000A;  <span class="ruby-comment"># Balloonhelp funktioniert damit nicht (oder?).</span>&#x000A;  <span class="ruby-comment"># </span>&#x000A;  <span class="ruby-identifier">ans</span> = <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">messageBox</span>( <span class="ruby-value">:type=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:yesno</span>,<span class="ruby-value">:icon=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:question</span>,&#x000A;    <span class="ruby-value">:title=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;Next&quot;</span>,&#x000A;    <span class="ruby-value">:message=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;xxx&quot;</span>,&#x000A;    <span class="ruby-value">:detail=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;xxx&quot;</span>&#x000A;  )&#x000A;  <span class="ruby-comment">#    </span>&#x000A;  <span class="ruby-comment">#    puts sprintf(&quot;--DEBUG: button: %1s &quot;, button.inspect)   #loe</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-messageBoxExamples-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 250</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">messageBoxExamples</span>&#x000A;  <span class="ruby-comment"># TODO: Is this usefull?</span>&#x000A;  <span class="ruby-comment">##################################################################</span>&#x000A;  <span class="ruby-comment"># :type: :abortretryignore, :ok, :okcancel, :retrycancel, :yesno, :yesnocancel</span>&#x000A;  <span class="ruby-comment"># :icon: :error, :info, :question or :warning (default: info)</span>&#x000A;  <span class="ruby-comment"># :detail: Specifies an auxiliary message to the main message given by</span>&#x000A;  <span class="ruby-comment">#   the -message option. Where supported by the underlying OS, the</span>&#x000A;  <span class="ruby-comment">#   message detail will be presented in a less emphasized font than the</span>&#x000A;  <span class="ruby-comment">#   main message.</span>&#x000A;  <span class="ruby-comment"># Returns: A String describing the pressed button (&quot;ok&quot;, &quot;cancel&quot;, &quot;retry&quot;, &quot;ignore&quot;, ...)</span>&#x000A;  <span class="ruby-comment"># Balloonhelp funktioniert damit nicht (oder?).</span>&#x000A;  <span class="ruby-comment"># </span>&#x000A;  <span class="ruby-identifier">ans</span> = <span class="ruby-constant">Tk</span>.<span class="ruby-identifier">messageBox</span>( <span class="ruby-value">:type=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:yesno</span>,<span class="ruby-value">:icon=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">:question</span>,&#x000A;    <span class="ruby-value">:title=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;Next&quot;</span>,&#x000A;    <span class="ruby-value">:message=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;xxx&quot;</span>,&#x000A;    <span class="ruby-value">:detail=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;xxx&quot;</span>&#x000A;  )&#x000A;  <span class="ruby-comment">#    </span>&#x000A;  <span class="ruby-comment">#    puts sprintf(&quot;--DEBUG: button: %1s &quot;, button.inspect)   #loe</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-method-i-multi_choice'>
@@ -230,7 +230,8 @@
                   </li><li>
                   <p><code>hash</code> - (Hash, optional)</p>
                   <ul><li>
-                  <p><code>:question</code> - Like above.</p>
+                  <p><code>:question</code> - (String) Your question; <code>nil</code> -&gt; no
+                  question.</p>
                   </li><li>
                   <p><code>:help</code> - Like above.</p>
                   </li><li>
@@ -272,7 +273,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-multi_choice-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-multi_choice-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 378</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">multi_choice</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">MultiChoiceD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-multi_choice-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 379</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">multi_choice</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">MultiChoiceD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-method-i-open_file'>
@@ -351,7 +352,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-open_file-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-open_file-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 534</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_file</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">OpenFileD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-open_file-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 535</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_file</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">OpenFileD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-method-i-open_files'>
@@ -432,7 +433,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-open_files-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-open_files-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 476</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_files</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">OpenFilesD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-open_files-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 477</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_files</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">OpenFilesD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-method-i-save_file'>
@@ -516,7 +517,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-save_file-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-save_file-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 597</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_file</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">SaveFileD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-save_file-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 598</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_file</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">SaveFileD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
               <div class='method public-instance' id='method-method-i-single_choice'>
@@ -589,7 +590,7 @@
                   <a class='source-toggle' href='#' onclick="toggleCode('method-i-single_choice-source'); return false">
                     [show source]
                   </a>
-                  <pre id='method-i-single_choice-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 337</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">single_choice</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">SingleChoiceD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                  <pre id='method-i-single_choice-source'><span class="ruby-comment"># File lib/tkxxs.rb, line 338</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">single_choice</span>( *<span class="ruby-identifier">args</span> )&#x000A;  <span class="ruby-constant">TKXXS_CLASSES</span><span class="ruby-operator">::</span><span class="ruby-constant">SingleChoiceD</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">answer</span>&#x000A;<span class="ruby-keyword">end</span></pre>
                 </div>
               </div>
             </div>
