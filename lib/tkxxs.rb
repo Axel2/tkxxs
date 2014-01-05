@@ -151,8 +151,6 @@ module TKXXS
       ##/ self.update # Nötig?
     end # print
 
-    # TODO def p()
-
     def p( arg )
       @tkxxs_buffer.reopen
       @tkxxs_buffer.puts arg.inspect
