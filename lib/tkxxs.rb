@@ -136,7 +136,9 @@ module TKXXS
     ##################################################################
     # puts, formated as heading level 2 
     def puts_h2( str )
-      self.insert(:end, "\n" + str.chomp("\n") + "\n", @tagH2)
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.puts str
+      self.insert(:end, @tkxxs_buffer.string, @tagH2)
     end # puts_h2
     
     ##################################################################
