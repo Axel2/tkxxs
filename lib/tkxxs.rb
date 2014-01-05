@@ -351,7 +351,7 @@ module TKXXS
   #   Quite usefull: a Proc for object.
   # * +help+ - (String, optional) Array, with one help-String for each choice element!;  +nil+ => No help text 
   # * +hash+ - (Hash, optional) 
-  #   * <tt>:question</tt> - Like above.
+  #   * <tt>:question</tt> - (String) Your question; +nil+ -> no question.
   #   * <tt>:help</tt> - Like above. 
   #   * <tt>:configSection</tt> - (any String, Integer, Float or nil)
   #     Sets the section where to store and read from config settings.
