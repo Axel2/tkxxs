@@ -156,7 +156,9 @@ module TKXXS
     # :nodoc:
     def write( str )
       ##self.insert(:end, "\n" + str)
-      self.insert(:end, str)
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.write str
+      self.insert(:end, @tkxxs_buffer.string)
       self.see :end
       ##/ self.update # Nötig?
     end # write
