@@ -14,6 +14,7 @@ require 'tkxxs/conf'
 require 'tk'
 require 'tkextlib/tile'
 require( File.dirname(DIR_OF_TKXXS) + '/ext/tkballoonhelp.rb' )
+require 'stringio'
 ##/ ##require 'tkrbwidget/tkballoonhelp/tkballoonhelp.rb'
 ##/ ##require 'ext/tkballoonhelp/tkballoonhelp.rb'
 ##/ if $0 == __FILE__
@@ -118,15 +119,16 @@ module TKXXS
         @tagSel.add('0.0', :end)
         Kernel.raise TkCallbackBreak
       }
+      @tkxxs_buffer = StringIO.new
 
     end # initialize
     
     ##################################################################
     # Like Kernel::puts. Write a String to the Output Window.
     def puts( *args )
-      args = args.join("\n") if args.class == Array
-      str = args.chomp("\n") + "\n"
-      self.insert(:end, str)
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.puts args
+      self.insert(:end, @tkxxs_buffer.string)
       self.see :end
       ##/ self.update # Nötig?
     end # puts
