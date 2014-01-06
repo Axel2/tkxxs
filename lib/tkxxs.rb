@@ -14,6 +14,7 @@ require 'tkxxs/conf'
 require 'tk'
 require 'tkextlib/tile'
 require( File.dirname(DIR_OF_TKXXS) + '/ext/tkballoonhelp.rb' )
+require 'stringio'
 ##/ ##require 'tkrbwidget/tkballoonhelp/tkballoonhelp.rb'
 ##/ ##require 'ext/tkballoonhelp/tkballoonhelp.rb'
 ##/ if $0 == __FILE__
@@ -118,46 +119,51 @@ module TKXXS
         @tagSel.add('0.0', :end)
         Kernel.raise TkCallbackBreak
       }
+      @tkxxs_buffer = StringIO.new
 
     end # initialize
-    
+
+    def output_with(method, tag, *args)
+      @tkxxs_buffer.reopen
+      @tkxxs_buffer.send(method, *args)
+      self.insert(:end, @tkxxs_buffer.string, tag)
+      self.see :end
+    end
+
     ##################################################################
     # Like Kernel::puts. Write a String to the Output Window.
     def puts( *args )
-      args = args.join("\n") if args.class == Array
-      str = args.chomp("\n") + "\n"
-      self.insert(:end, str)
-      self.see :end
-      ##/ self.update # Nötig?
+      output_with(:puts, nil, *args)
     end # puts
 
     ##################################################################
     # puts, formated as heading level 2 
-    def puts_h2( str )
-      self.insert(:end, "\n" + str.chomp("\n") + "\n", @tagH2)
+    def puts_h2( *args )
+      output_with(:puts, @tagH2, *args)
     end # puts_h2
     
     ##################################################################
     # Like Kernel::print. Print a String to the Output Window.
     def print( *args )
-      if args.class == Array
-        args.map! {|a|  a.to_s   }
-        args = args.join(" ") 
-      end
-      str = args.chomp("\n") + "\n"
-      self.insert('end', str)
-      self.see :end
-      ##/ self.update # Nötig?
+      output_with(:print, nil, *args)
     end # print
-    
-    # TODO def p()
+
+    ##################################################################
+    # Like Kernel::p. For each object, directly writes obj.inspect
+    # followed by a newline to the program's standard output.
+    def p( arg )
+      output_with(:puts, nil, arg.inspect)
+    end # p
+
+    ##################################################################
+    # Like Kernel::printf. Print object based on given format string.
+    def printf( *args )
+      output_with(:printf, nil, *args)
+    end # printf
 
     # :nodoc:
     def write( str )
-      ##self.insert(:end, "\n" + str)
-      self.insert(:end, str)
-      self.see :end
-      ##/ self.update # Nötig?
+      output_with(:write, nil, str)
     end # write
 
     ##########################################################################
