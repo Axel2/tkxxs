@@ -30,6 +30,7 @@ class MyTinyUI
   
   def explain_puts(  )
     @outW.puts "'puts' writes to the Output Window."
+    puts "And this is from Kernel.puts (redirected stdout)."
     
     @outW.puts_h2 "@outW.puts_h2 writes formated text to the Output Window"
     

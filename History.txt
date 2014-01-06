@@ -1,3 +1,10 @@
+=== 0.1.3 / 2013-01-06
+
+* Implemented OutW#p and OutW#prinf. (Many thanks to Abinoam P. Marques Jr.)
+* Improved .gitignore and .gitattributes. (Abinoam P. Marques Jr., too)
+* Added example. (Abinoam P. Marques Jr.)
+* Fixed rakefile
+
 === 0.1.2 / 2013-01-05
 
 * Made it work on Ubuntu (Many thanks to Abinoam P. Marques Jr.)

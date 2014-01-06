@@ -17,4 +17,5 @@ lib/tkxxs/version.rb
 rdoc_developers_hanna.bat
 rdoc_users_hanna.bat
 samples/big_example.rb
+samples/output_example.rb
 samples/small_example.rb

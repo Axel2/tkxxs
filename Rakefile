@@ -30,8 +30,9 @@ Hoe.spec "tkxxs" do
 
 
     ary.push "-x", "lib/tkxxs/tkxxs_classes.rb"
-    ary.push "-x", "lib/tkxxs/samples"
     ary.push "-x", "lib/tkxxs/conf.rb"
+    ary.push "-x", "samples"
+    ary.push "-x", "ext"
   end
 
   dependency "Platform", "~> 0.4.0"
