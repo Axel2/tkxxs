@@ -123,7 +123,7 @@ module TKXXS
 
     end # initialize
 
-    def output_with(method, *args, tag)
+    def output_with(method, tag, *args)
       @tkxxs_buffer.reopen
       @tkxxs_buffer.send(method, *args)
       self.insert(:end, @tkxxs_buffer.string, tag)
@@ -133,37 +133,37 @@ module TKXXS
     ##################################################################
     # Like Kernel::puts. Write a String to the Output Window.
     def puts( *args )
-      output_with(:puts, *args, nil)
+      output_with(:puts, nil, *args)
     end # puts
 
     ##################################################################
     # puts, formated as heading level 2 
     def puts_h2( *args )
-      output_with(:puts, *args, @tagH2)
+      output_with(:puts, @tagH2, *args)
     end # puts_h2
     
     ##################################################################
     # Like Kernel::print. Print a String to the Output Window.
     def print( *args )
-      output_with(:print, *args, nil)
+      output_with(:print, nil, *args)
     end # print
 
     ##################################################################
     # Like Kernel::p. For each object, directly writes obj.inspect
     # followed by a newline to the program's standard output.
     def p( arg )
-      output_with(:puts, arg.inspect, nil)
+      output_with(:puts, nil, arg.inspect)
     end # p
 
     ##################################################################
     # Like Kernel::printf. Print object based on given format string.
     def printf( *args )
-      output_with(:printf, *args, nil)
+      output_with(:printf, nil, *args)
     end # printf
 
     # :nodoc:
     def write( str )
-      output_with(:write, str, nil)
+      output_with(:write, nil, str)
     end # write
 
     ##########################################################################
